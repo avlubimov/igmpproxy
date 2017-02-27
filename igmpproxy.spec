@@ -1,6 +1,6 @@
 Name: igmpproxy
 Version: 0.1
-Release: 7git
+Release: 8git
 License: GPL
 Group: System/Servers
 Summary: Simple mulitcast router for Linux that only uses the IGMP protocol
@@ -45,6 +45,12 @@ install -D -m 755 igmpproxy.service %{buildroot}%{_unitdir}/%{name}.service
 %config(noreplace) %{_sysconfdir}/%{name}.conf
 
 %changelog
+* Mon Feb 27 2017 avl <avlubimov@gmail.com> 0.1-8git
+- fix spec (avlubimov@gmail.com)
+
+* Mon Feb 27 2017 avl <avlubimov@gmail.com>
+- fix spec (avlubimov@gmail.com)
+
 * Mon Feb 27 2017 avl <avlubimov@gmail.com> 0.1-7git
 - fix spec (avlubimov@gmail.com)
 
