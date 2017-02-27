@@ -1,0 +1,15 @@
+[Unit]
+Description=Starts and stops the igmpproxy service.
+Requires=rpcbind.service
+After=syslog.target network.target rpcbind.service
+
+[Service]
+Type=forking
+RemainAfterExit=yes
+PIDFile=/run/igmpproxy.pid
+EnvironmentFile=/etc/sysconfig/network
+ExecStart=/usr/sbin/igmpproxy -d /etc/igmpproxy.conf
+
+[Install]
+WantedBy=multi-user.target
+
