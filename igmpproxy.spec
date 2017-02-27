@@ -45,6 +45,9 @@ install -D -m 755 igmpproxy.service %{buildroot}%{_unitdir}/%{name}.service
 %config(noreplace) %{_sysconfdir}/%{name}.conf
 
 %changelog
+* Mon Feb 27 2017 avl <avlubimov@gmail.com> 0.1-7git
+- fix spec (avlubimov@gmail.com)
+
 * Mon Feb 27 2017 avl <avlubimov@gmail.com> 0.1-6git
 - init rpm package 
 * Thu Sep 04 2014 Denis Silakov <denis.silakov@rosalab.ru> 0.1-5
