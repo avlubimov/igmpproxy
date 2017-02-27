@@ -1,6 +1,6 @@
 Name: igmpproxy
 Version: 0.1
-Release: 9git
+Release: 10git
 License: GPL
 Group: System/Servers
 Summary: Simple mulitcast router for Linux that only uses the IGMP protocol
@@ -37,7 +37,7 @@ install -D -m 755 igmpproxy.service %{buildroot}/usr/lib/systemd/system/%{name}.
 %systemd_postun_with_restart %{name}.service
 
 %files
-%doc AUTHORS README NEWS
+%doc  README NEWS
 %{_sbindir}/%{name}
 %{_mandir}/man5/*
 %{_mandir}/man8/*
