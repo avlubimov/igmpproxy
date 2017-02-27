@@ -25,7 +25,7 @@ make
 %makeinstall
 rm -rf %{buildroot}%{_libdir}
 rm -rf %{buildroot}/usr/src
-install -D -m 755 igmpproxy.service %{buildroot}%{_unitdir}/%{name}.service
+install -D -m 755 igmpproxy.service %{buildroot}/usr/lib/systemd/system/%{name}.service
 
 %post
 %systemd_post %{name}.service
@@ -41,14 +41,11 @@ install -D -m 755 igmpproxy.service %{buildroot}%{_unitdir}/%{name}.service
 %{_sbindir}/%{name}
 %{_mandir}/man5/*
 %{_mandir}/man8/*
-%{_unitdir}/%{name}*
+/usr/lib/systemd/system/%{name}*
 %config(noreplace) %{_sysconfdir}/%{name}.conf
 
 %changelog
 * Mon Feb 27 2017 avl <avlubimov@gmail.com> 0.1-8git
-- fix spec (avlubimov@gmail.com)
-
-* Mon Feb 27 2017 avl <avlubimov@gmail.com>
 - fix spec (avlubimov@gmail.com)
 
 * Mon Feb 27 2017 avl <avlubimov@gmail.com> 0.1-7git
