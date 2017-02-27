@@ -45,6 +45,9 @@ install -D -m 755 igmpproxy.service %{buildroot}/usr/lib/systemd/system/%{name}.
 %config(noreplace) %{_sysconfdir}/%{name}.conf
 
 %changelog
+* Mon Feb 27 2017 avl <avlubimov@gmail.com> 0.1-10git
+- fix spec (avlubimov@gmail.com)
+
 * Mon Feb 27 2017 avl <avlubimov@gmail.com> 0.1-9git
 - fix spec (avlubimov@gmail.com)
 
