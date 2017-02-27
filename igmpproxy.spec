@@ -1,12 +1,11 @@
 Name: igmpproxy
 Version: 0.1
-Release: 6git
+Release: 7git
 License: GPL
 Group: System/Servers
 Summary: Simple mulitcast router for Linux that only uses the IGMP protocol
 
 Source0: http://sourceforge.net/projects/igmpproxy/igmpproxy-%{version}.tar.gz
-Source1: igmpproxy.service
 
 BuildRequires: gcc autoconf automake
 
@@ -26,7 +25,7 @@ protocol.
 %makeinstall
 rm -rf %{buildroot}%{_libdir}
 rm -rf %{buildroot}/usr/src
-install -D -m 755 %{SOURCE1} %{buildroot}%{_unitdir}/%{name}.service
+install -D -m 755 igmpproxy.service %{buildroot}%{_unitdir}/%{name}.service
 
 %post
 %systemd_post %{name}.service
