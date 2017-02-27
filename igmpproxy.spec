@@ -47,6 +47,9 @@ systemctl  daemon-reload
 %config(noreplace) %{_sysconfdir}/%{name}.conf
 
 %changelog
+* Mon Feb 27 2017 avl <avlubimov@gmail.com> 0.1-12git
+- fix spec (avlubimov@gmail.com)
+
 * Mon Feb 27 2017 avl <avlubimov@gmail.com> 0.1-11git
 - fix spec (avlubimov@gmail.com)
 
