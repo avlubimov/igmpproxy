@@ -19,7 +19,7 @@ protocol.
 %build
 ./bootstrap
 %configure
-%make
+make
 
 %install
 %makeinstall
